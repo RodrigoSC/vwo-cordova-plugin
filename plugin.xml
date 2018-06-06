@@ -29,7 +29,9 @@
 
     <!-- ios -->
 	<platform name="ios">
-		<hook type="before_build" src="src/ios/hooks/addEmbeddedRes.js"/>
+		<hook type="before_build" src="src/ios/hooks/addEmbeddedResVWO.js"/>
+		<hook type="before_build" src="src/ios/hooks/addEmbeddedResStarscream.js"/>
+		<hook type="before_build" src="src/ios/hooks/addEmbeddedResSocketIO.js"/>
 		<framework src="src/ios/VWO.framework" custom="true" embed="true" />
 		<framework src="src/ios/Starscream.framework" custom="true" embed="true" />
 		<framework src="src/ios/SocketIO.framework" custom="true" embed="true" />
