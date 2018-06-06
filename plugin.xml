@@ -7,8 +7,6 @@
     <description> </description>
     <license>MIT</license>
 
-    <dependency id="cordova-plugin-cocoapod-support"/>
-
     <!-- android -->
     <platform name="android">
         <framework src="src/android/build-extras.gradle" custom="true" type="gradleReference" />
@@ -30,10 +28,9 @@
     </platform>
 
     <!-- ios -->
-    <platform name="ios">
-        <pods-config ios-min-version="9.0" use-frameworks="true">
-        </pods-config>
-        <pod name="VWO" version=">= 2.4.1"/>
+	<platform name="ios">
+		<hook type="before_build" src="src/ios/hooks/addEmbeddedRes.js"/>
+		<framework src="src/ios/VWO.framework" custom="true" embed="true" />
         <js-module src="www/plugin.js" name="plugin">
             <runs/>
             <clobbers target="VWOCordovaPlugin" />

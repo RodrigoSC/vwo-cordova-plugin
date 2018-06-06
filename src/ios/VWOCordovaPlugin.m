@@ -1,5 +1,5 @@
 #import "VWOCordovaPlugin.h"
-#import "VWO.h"
+#import <VWO/VWO.h>
 
 #import <Cordova/CDVAvailability.h>
 

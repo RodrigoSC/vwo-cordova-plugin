@@ -1,0 +1,6 @@
+framework module VWO {
+  umbrella header "VWO.h"
+
+  export *
+  module * { export * }
+}
