@@ -31,6 +31,8 @@
 	<platform name="ios">
 		<hook type="before_build" src="src/ios/hooks/addEmbeddedRes.js"/>
 		<framework src="src/ios/VWO.framework" custom="true" embed="true" />
+		<framework src="src/ios/Starscream.framework" custom="true" embed="true" />
+		<framework src="src/ios/SocketIO.framework" custom="true" embed="true" />
         <js-module src="www/plugin.js" name="plugin">
             <runs/>
             <clobbers target="VWOCordovaPlugin" />
